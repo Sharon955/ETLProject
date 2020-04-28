@@ -1,11 +1,10 @@
-drop table unemployment;
 create table unemployment (
 	Year int,
 	Month int,
 	State text,
 	Rate int
 );
-drop table joblisting;
+
 create table joblisting (
 	job_title text,
 	location text,
@@ -13,4 +12,14 @@ create table joblisting (
 	month int,
 	year int,
 	state text
+);
+
+create table statemapping (
+	US_state text,
+	US_state_list text primary key
+);
+
+create table industrymapping (
+	job_title text primary key,
+	Industry text
 );
